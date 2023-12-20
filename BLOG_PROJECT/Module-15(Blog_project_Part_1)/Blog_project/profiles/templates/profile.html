@@ -1,0 +1,9 @@
+{% extends "base.html" %} {% block content %} 
+{% load crispy_forms_tags %}
+<h1 class="text-center fw-bold">Add Profile Info</h1>
+<form method="post" class="container">
+  {% csrf_token %}
+   {{ profile|crispy }}
+  <button type="submit" class="btn btn-success">Submit</button>
+</form>
+{% endblock %}
