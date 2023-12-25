@@ -1,0 +1,10 @@
+{% extends "base.html" %} 
+{% block content %}
+  {% load crispy_forms_tags %}
+  <h1 class="text-center fw-bold">{{type}} Author</h1>
+  <form method="post" class="container">
+    {% csrf_token %} 
+    {{form|crispy }}
+    <button type="submit" class="btn btn-success mb-5">Submit</button>
+  </form>
+{% endblock %}
